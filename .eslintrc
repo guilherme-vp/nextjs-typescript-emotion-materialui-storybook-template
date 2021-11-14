@@ -1,10 +1,12 @@
 {
 	"extends": [
+		"prettier",
 		"next",
-		"prettier"
+		"plugin:@typescript-eslint/recommended"
 	],
 	"plugins": [
-		"prettier"
+		"prettier",
+		"@typescript-eslint"
 	],
 	"rules": {
 		"semi": [
@@ -88,6 +90,15 @@
 				"avoidEscape": false
 			}
 		],
-		"prettier/prettier": "error"
+		"prettier/prettier": "error",
+		"@typescript-eslint/semi": [
+			"error",
+			"never"
+		],
+		"@typescript-eslint/no-explicit-any": "off",
+		"@typescript-eslint/explicit-function-return-type": "off",
+		"@typescript-eslint/ban-ts-ignore": "off",
+		"@typescript-eslint/explicit-member-accessibility": "off",
+		"@typescript-eslint/explicit-module-boundary-types": "off"
 	}
 }
