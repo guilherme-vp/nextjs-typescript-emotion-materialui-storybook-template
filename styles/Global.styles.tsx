@@ -17,14 +17,14 @@ export const GlobalStyle = createGlobalStyle`
 	}
 
 	body {
-		color: ${props => props.theme.text.main};
+		color: #1D2B4E;
 		font-size: 0.875rem;
 	 	font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 		font-weight: 400;
 		line-height: 1.43;
 		overflow-x: hidden;
 		letter-spacing: 0.01071em;
-		background-color: ${props => props.theme.background.main};
+		background-color: #f0f0f5;
 	}
 
 	button {
@@ -38,7 +38,7 @@ export const GlobalStyle = createGlobalStyle`
 	a {
 		font-size: inherit;
 		text-decoration: none;
-		color: ${props => props.theme.text.link};
+		color: #4a90e2;
 	}
 
 	form {
