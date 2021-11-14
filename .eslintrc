@@ -1,0 +1,126 @@
+{
+	"extends": ["prettier", "next", "plugin:@typescript-eslint/recommended"],
+	"plugins": ["import", "prettier", "@typescript-eslint"],
+	"rules": {
+		"semi": ["error", "never"],
+		"comma-dangle": ["error", "never"],
+		"arrow-parens": ["error", "as-needed"],
+		"consistent-return": "off",
+		"no-underscore-dangle": "off",
+		"func-names": "off",
+		"react/react-in-jsx-scope": "off",
+		"class-methods-use-this": "off",
+		"no-useless-constructor": "off",
+		"no-unused-vars": "warn",
+		"no-extra-parens": "off",
+		"no-case-declarations": "off",
+		"object-shorthand": "error",
+		"no-template-curly-in-string": "error",
+		"prefer-template": "error",
+		"linebreak-style": ["error", "unix"],
+		"no-plusplus": [
+			"error",
+			{
+				"allowForLoopAfterthoughts": true
+			}
+		],
+		"no-tabs": [
+			"error",
+			{
+				"allowIndentationTabs": true
+			}
+		],
+		"indent": [
+			"error",
+			"tab",
+			{
+				"SwitchCase": 1
+			}
+		],
+		"lines-between-class-members": "off",
+		"no-param-reassign": "off",
+		"no-console": "off",
+		"max-len": [
+			"error",
+			{
+				"code": 180
+			}
+		],
+		"no-nested-ternary": "off",
+		"no-use-before-define": "off",
+		"prefer-arrow-callback": [
+			"error",
+			{
+				"allowUnboundThis": true,
+				"allowNamedFunctions": true
+			}
+		],
+		"radix": "off",
+		"prefer-const": [
+			"error",
+			{
+				"destructuring": "all",
+				"ignoreReadBeforeAssign": false
+			}
+		],
+		"quotes": [
+			"error",
+			"single",
+			{
+				"allowTemplateLiterals": true,
+				"avoidEscape": false
+			}
+		],
+		"prettier/prettier": "error",
+		"@typescript-eslint/semi": ["error", "never"],
+		"@typescript-eslint/no-explicit-any": "off",
+		"@typescript-eslint/explicit-function-return-type": "off",
+		"@typescript-eslint/ban-ts-ignore": "off",
+		"@typescript-eslint/explicit-member-accessibility": "off",
+		"@typescript-eslint/explicit-module-boundary-types": "off",
+		"import/no-extraneous-dependencies": "off",
+		"import/prefer-default-export": "off",
+		"import/no-unresolved": "error",
+		"import/order": [
+			"error",
+			{
+				"groups": ["builtin", "external", "internal"],
+				"pathGroups": [
+					{
+						"pattern": "@emotion/react",
+						"group": "builtin",
+						"position": "before"
+					},
+					{
+						"pattern": "react",
+						"group": "builtin",
+						"position": "before"
+					},
+					{
+						"pattern": "@/**",
+						"group": "external"
+					}
+				],
+				"pathGroupsExcludedImportTypes": ["builtin"],
+				"newlines-between": "always",
+				"alphabetize": {
+					"order": "asc"
+				}
+			}
+		],
+		"import/extensions": [
+			"error",
+			"ignorePackages",
+			{
+				"js": "never",
+				"jsx": "never",
+				"ts": "never",
+				"tsx": "never",
+				"png": "never",
+				"svg": "never",
+				"jpg": "never",
+				"jpeg": "never"
+			}
+		]
+	}
+}

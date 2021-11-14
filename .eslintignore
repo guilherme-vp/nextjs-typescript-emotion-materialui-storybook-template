@@ -1,0 +1,11 @@
+# Assets
+**/assets
+
+# Files
+*.json
+
+# Build
+.next
+dist
+build
+node_modules
