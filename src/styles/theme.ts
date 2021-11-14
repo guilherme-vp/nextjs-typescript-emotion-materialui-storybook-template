@@ -36,6 +36,6 @@ export const theme = {
 
 export type Theme = typeof theme
 
-declare module 'styled-components' {
+declare module '@emotion/react' {
 	export type DefaultTheme = Theme
 }

@@ -1,8 +1,8 @@
-import { createGlobalStyle } from 'styled-components'
+import { css } from '@mui/styled-engine'
 
-export const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = css`
 	html {
-		font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+		font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
 		box-sizing: border-box;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
@@ -11,15 +11,17 @@ export const GlobalStyle = createGlobalStyle`
 	* {
 		margin: 0;
 		padding: 0;
-		&, &::before, &::after {
+		&,
+		&::before,
+		&::after {
 			box-sizing: border-box;
 		}
 	}
 
 	body {
-		color: #1D2B4E;
+		color: #1d2b4e;
 		font-size: 0.875rem;
-	 	font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+		font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
 		font-weight: 400;
 		line-height: 1.43;
 		overflow-x: hidden;
@@ -28,7 +30,7 @@ export const GlobalStyle = createGlobalStyle`
 	}
 
 	button {
-		font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+		font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
 	}
 
 	body::backdrop {
