@@ -17,15 +17,6 @@ declare module '@mui/material/styles' {
 	}
 }
 
-// Update the Typography's variant prop options
-declare module '@mui/material/Typography' {
-	interface TypographyPropsVariantOverrides {
-		display1: true
-		display2: true
-		display3: true
-	}
-}
-
 const materialBaseTheme = (theme: Theme): ThemeOptions => ({
 	palette: {
 		primary: {
@@ -98,58 +89,11 @@ const materialBaseTheme = (theme: Theme): ThemeOptions => ({
 					borderRadius: '25px',
 					fontWeight: 600
 				},
-				contained: {
-					padding: '8px 30px'
-				},
-				containedSizeSmall: {
-					padding: '6px 10px'
-				},
-				outlined: {
-					padding: '6px 30px',
-					borderWidth: '2px !important'
-				},
 				text: {
 					fontWeight: 400,
 					padding: '2px 5px',
 					'& .MuiButton-label': {
 						justifyContent: 'space-between'
-					}
-				}
-			}
-		},
-		MuiAppBar: {
-			defaultProps: {
-				position: 'fixed',
-				elevation: 0
-			},
-			styleOverrides: {
-				root: {
-					borderBottom: '1px solid',
-					borderBottomColor: theme.border.thin
-				},
-				colorPrimary: {
-					backgroundColor: theme.background.main,
-					color: theme.text.main
-				}
-			}
-		},
-		MuiChip: {
-			styleOverrides: {
-				root: {
-					height: 24
-				},
-				sizeSmall: {
-					fontWeight: 500,
-					padding: '5px 10px'
-				},
-				label: {
-					fontSize: pxToRem(12)
-				},
-				deleteIconColorPrimary: {
-					color: theme.colors.primary,
-					fontSize: pxToRem(14),
-					'&:hover, &:active': {
-						color: alpha(theme.colors.primary, 0.7)
 					}
 				}
 			}
@@ -175,13 +119,6 @@ const materialBaseTheme = (theme: Theme): ThemeOptions => ({
 				}
 			}
 		},
-		MuiListItem: {
-			styleOverrides: {
-				root: {
-					padding: '8px 20px'
-				}
-			}
-		},
 		MuiMenuItem: {
 			styleOverrides: {
 				root: {
@@ -200,44 +137,7 @@ const materialBaseTheme = (theme: Theme): ThemeOptions => ({
 					borderColor: theme.border.thin
 				},
 				wrapper: {
-					color: theme.border.thin,
-					fontSize: pxToRem(18),
-					paddingLeft: 20,
-					paddingRight: 20
-				},
-				wrapperVertical: {
-					paddingTop: 20,
-					paddingBottom: 20
-				}
-			}
-		},
-		MuiDrawer: {
-			styleOverrides: {
-				paper: {
-					borderRight: 0,
-					backgroundColor: theme.background.light
-				}
-			}
-		},
-		MuiTab: {
-			styleOverrides: {
-				root: {
-					paddingTop: 0,
-					paddingBottom: 0,
-					fontSize: pxToRem(14),
-					color: theme.text.main,
-					transition: 'all 0.3s linear',
-					borderTopRightRadius: '16px',
-					borderBottomRightRadius: '16px',
-					fontWeight: 500,
-					'&:hover': {
-						backgroundColor: alpha(theme.background.secondary, 0.4)
-					},
-					'&.Mui-selected': {
-						fontWeight: 700,
-						color: theme.colors.primary,
-						backgroundColor: alpha(theme.colors.primary, 0.1)
-					}
+					color: theme.border.thin
 				}
 			}
 		}
