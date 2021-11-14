@@ -42,13 +42,9 @@ const materialBaseTheme = (theme: Theme): ThemeOptions => ({
 			black: theme.tags.black,
 			white: theme.tags.white
 		},
-		grey: {
-			'600': theme.grey.main
-		},
 		background: {
 			paper: theme.background.main
-		},
-		divider: theme.border.darker
+		}
 	},
 	typography: {
 		display1: {
@@ -78,13 +74,13 @@ const materialBaseTheme = (theme: Theme): ThemeOptions => ({
 			fontSize: pxToRem(16)
 		},
 		h5: {
-			fontSize: pxToRem(14)
+			fontSize: pxToRem(15)
 		},
 		button: {
 			fontSize: pxToRem(20)
 		},
 		body1: {
-			fontSize: pxToRem(15)
+			fontSize: pxToRem(14)
 		},
 		body2: {
 			fontSize: pxToRem(12)
@@ -158,24 +154,6 @@ const materialBaseTheme = (theme: Theme): ThemeOptions => ({
 				}
 			}
 		},
-		MuiSelect: {
-			styleOverrides: {
-				root: {
-					border: `1px solid ${theme.border.thin}`,
-					padding: '12px 15px',
-					fontSize: pxToRem(12)
-				},
-				icon: {
-					right: 2
-				},
-				select: {
-					'&:focus': {
-						borderRadius: 'inherit',
-						borderColor: theme.border.darker
-					}
-				}
-			}
-		},
 		MuiInput: {
 			defaultProps: {
 				disableUnderline: true
@@ -185,12 +163,14 @@ const materialBaseTheme = (theme: Theme): ThemeOptions => ({
 					borderRadius: 6,
 					border: `1px solid ${theme.border.thin}`,
 					fontSize: pxToRem(14),
-					marginTop: '0 !important'
+					marginTop: '0 !important',
+					backgroundColor: theme.input.background,
+					color: theme.input.text
 				},
 				input: {
 					padding: '14px 16px 15px',
 					'&::placeholder': {
-						color: theme.grey.main
+						color: theme.input.placeholder
 					}
 				}
 			}
@@ -217,7 +197,7 @@ const materialBaseTheme = (theme: Theme): ThemeOptions => ({
 		MuiDivider: {
 			styleOverrides: {
 				root: {
-					borderColor: theme.border.darker
+					borderColor: theme.border.thin
 				},
 				wrapper: {
 					color: theme.border.thin,
@@ -228,16 +208,6 @@ const materialBaseTheme = (theme: Theme): ThemeOptions => ({
 				wrapperVertical: {
 					paddingTop: 20,
 					paddingBottom: 20
-				},
-				withChildren: {
-					'&::after, &::before': {
-						borderColor: theme.grey.main
-					}
-				},
-				withChildrenVertical: {
-					'&::after, &::before': {
-						borderColor: theme.grey.main
-					}
 				}
 			}
 		},
@@ -261,7 +231,7 @@ const materialBaseTheme = (theme: Theme): ThemeOptions => ({
 					borderBottomRightRadius: '16px',
 					fontWeight: 500,
 					'&:hover': {
-						backgroundColor: alpha(theme.grey.secondary, 0.4)
+						backgroundColor: alpha(theme.background.secondary, 0.4)
 					},
 					'&.Mui-selected': {
 						fontWeight: 700,
