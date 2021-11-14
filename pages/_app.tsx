@@ -1,15 +1,15 @@
 import * as React from 'react'
 
-import { ThemeProvider as StyledProvider } from '@emotion/react'
+import { Global, ThemeProvider as StyledProvider } from '@emotion/react'
 
 import CssBaseline from '@mui/material/CssBaseline'
 import { ThemeProvider } from '@mui/material/styles'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 
-import GlobalStyle from '../styles/global.styles'
-import { materialTheme } from '../styles/material-theme'
-import { theme } from '../styles/theme'
+import GlobalStyle from '../src/styles/global.styles'
+import { materialTheme } from '../src/styles/material-theme'
+import { theme } from '../src/styles/theme'
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 			<ThemeProvider theme={materialTheme}>
 				<StyledProvider theme={theme}>
 					<CssBaseline />
-					<GlobalStyle />
+					<Global styles={GlobalStyle} />
 					<Component {...pageProps} />
 				</StyledProvider>
 			</ThemeProvider>
