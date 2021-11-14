@@ -1,0 +1,93 @@
+{
+	"extends": [
+		"next",
+		"prettier"
+	],
+	"plugins": [
+		"prettier"
+	],
+	"rules": {
+		"semi": [
+			"error",
+			"never"
+		],
+		"comma-dangle": [
+			"error",
+			"never"
+		],
+		"arrow-parens": [
+			"error",
+			"as-needed"
+		],
+		"consistent-return": "off",
+		"no-underscore-dangle": "off",
+		"func-names": "off",
+		"react/react-in-jsx-scope": "off",
+		"class-methods-use-this": "off",
+		"no-useless-constructor": "off",
+		"no-unused-vars": "warn",
+		"no-extra-parens": "off",
+		"no-case-declarations": "off",
+		"object-shorthand": "error",
+		"no-template-curly-in-string": "error",
+		"prefer-template": "error",
+		"linebreak-style": [
+			"error",
+			"unix"
+		],
+		"no-plusplus": [
+			"error",
+			{
+				"allowForLoopAfterthoughts": true
+			}
+		],
+		"no-tabs": [
+			"error",
+			{
+				"allowIndentationTabs": true
+			}
+		],
+		"indent": [
+			"error",
+			"tab",
+			{
+				"SwitchCase": 1
+			}
+		],
+		"lines-between-class-members": "off",
+		"no-param-reassign": "off",
+		"no-console": "off",
+		"max-len": [
+			"error",
+			{
+				"code": 180
+			}
+		],
+		"no-nested-ternary": "off",
+		"no-use-before-define": "off",
+		"prefer-arrow-callback": [
+			"error",
+			{
+				"allowUnboundThis": true,
+				"allowNamedFunctions": true
+			}
+		],
+		"radix": "off",
+		"prefer-const": [
+			"error",
+			{
+				"destructuring": "all",
+				"ignoreReadBeforeAssign": false
+			}
+		],
+		"quotes": [
+			"error",
+			"single",
+			{
+				"allowTemplateLiterals": true,
+				"avoidEscape": false
+			}
+		],
+		"prettier/prettier": "error"
+	}
+}
